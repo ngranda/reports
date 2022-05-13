@@ -1,0 +1,67 @@
+\documentclass[12pt, letterpaper]{article}
+
+% -------- included packagaes --------------
+\usepackage{graphicx}
+\usepackage{layout} % show a page layout
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{subcaption}
+% \usepackage{subfig}
+\usepackage{fullpage}
+\usepackage{times}
+\usepackage{microtype}  
+\usepackage{caption}    
+\usepackage{multirow}   
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{amsmath}    
+\usepackage{color,soul} 
+\usepackage{cite}
+\usepackage{url}
+\usepackage{float}
+\usepackage[acronym,toc]{glossaries}
+
+
+\input{defs}
+
+% -------- title and author ----------------
+\title{Material Aligned Analysis}
+\author{Nancy Granda Duarte}
+\date{\today}
+
+
+
+% -------- Main Document -------------------
+\setcounter{section}{0}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\clearpage\pagenumbering{roman}
+
+\tableofcontents
+\clearpage
+
+% \listoftables
+% \clearpage
+
+% \listoffigures
+% \clearpage
+
+\clearpage\pagenumbering{arabic}
+
+\glsresetall
+\input{01_intro}
+\glsresetall
+\input{02_geometry}
+
+% \glsresetall
+\newpage
+\clearpage
+% \bibliographystyle{ieeetr}
+% \bibliography{bibliography}{}
+
+\end{document}
