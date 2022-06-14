@@ -60,24 +60,33 @@ Instead a smaller geometry was used with a simpler source.
 \end{figure}
 
 \subsection{Smaller Geometry}
-
+The smaller geometry is a geometry that was been reduced by 1/32 in volume. 
+The dimensions of the outer steel are 7 cm x 12 cm x 52.75 cm. 
+The geometry can be seen in Figure \ref{fig:smaller_geom1}. 
+Figure \ref{fig:smaller_geom2} shows the material aligned mesh used in 
+the mesh-based workflow. 
+For the cell-based workflow, the geometry in Figure \ref{fig:smaller_geom1}
+was subdivided to match the mesh in Figure \ref{fig:smaller_geom2}. 
 \begin{figure}[!h]
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[scale=0.4, trim={4cm 3cm 1cm 22cm}, clip]{figs/mesh_geom.png}
         \caption{}
-        \label{fig:large_geom1}
+        \label{fig:smaller_geom1}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[scale=0.4, trim={4cm 3cm 1cm 22cm}, clip]{figs/mesh_geom_mesh.png}
         \caption{}
-        \label{fig:large_geom2}
+        \label{fig:smaller_geom2}
     \end{subfigure}
     \caption{Smaller geometry with two volumes in blue and mesh in gray}
-    \label{fig:large_geom}
+    \label{fig:smaller_geom}
 \end{figure}
-
+%
+The source used was a disk source perpendicular to the z-axis at ???
+CHECK THE POSITION 
+uniformly emitting 1 GeV protons monodirectionally in z-direction.
 \begin{figure}
     \begin{subfigure}{0.1\textwidth}
         \centering
@@ -92,9 +101,14 @@ Instead a smaller geometry was used with a simpler source.
         \includegraphics[scale=0.5, trim={4cm 2cm 1cm 22cm}, clip]{figs/ratio_nflux.png}
     \end{subfigure}
     \caption{Neutron flux ratio [Mesh/Cell]}
-    \label{fig:n_ratio_larger}
+    \label{fig:n_ratio_smaller}
 \end{figure}
+ 
 
+The neutron flux was inspected and the ratio between the mesh-based and 
+cell-based workflow is shown in Figure \ref{fig:n_ratio_smaller}. 
+This figure shows that the neutron flux for both workflows are similar 
+discrepancies less than 5\% and statistical errors less than 2 \%. 
 
 The photon transport was run with 1E10 particles. 
 For the cell workflow the photon source SDEF card was divided into 5 parts 
@@ -132,3 +146,13 @@ because of the number of volumetric cells involved.
     \label{fig:dose_cdf}
 \end{figure}
 
+\begin{table}[]
+    \centering
+    \begin{tabular}{|r|r|r|}
+    \hline
+               & Top Tally & Side Tally \\ \hline
+    z $\leq$ 1 & 66.5\%    & 58.3\%     \\ \hline
+    z $\leq$ 2 & 93.1\%    & 89.8\%     \\ \hline
+    z $\leq$ 3 & 98.3\%    & 99.7\%     \\ \hline
+    \end{tabular}
+\end{table}
